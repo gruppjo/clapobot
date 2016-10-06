@@ -8,6 +8,16 @@ rfid.on('ready', function() {
     console.log('Listening for a tag scan...');
     rfid.on('tag', function(tag) {
         console.log('tag:', tag.uid);
+	if (tag.uid[1] === 'e') {
+    		console.log('you are cool');
+		console.log('you get coffee');
+	}
+	else if (tag.uid[1] === 'd') {
+		console.log('you are not cool');
+	}
+	else {
+		console.log('you are dead');
+	}
     });
 });
 //console.log(JSON.stringify(rfid, null, 2));
