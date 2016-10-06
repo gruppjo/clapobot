@@ -18,6 +18,7 @@ rfid.on('ready', function() {
 	else {
 		console.log('you are dead');
 	}
+	console.log(JSON.stringify(tag, null, 2));
     });
 });
 //console.log(JSON.stringify(rfid, null, 2));
